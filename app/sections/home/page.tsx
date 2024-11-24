@@ -1,5 +1,5 @@
 const Home = () => (
-  <section id="home" className="flex flex-col md:flex-row items-center justify-between p-12 bg-gray-400 h-screen">
+  <section id="home" className="flex flex-col md:flex-row items-center justify-between p-8 bg-gray-400 h-screen">
     <div className="max-w-lg lg:max-w-xl xl:max-w-2xl text-center md:text-left">
       <h1 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-4">
         Descubre el futuro con ProPhone
