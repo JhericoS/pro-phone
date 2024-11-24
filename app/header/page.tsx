@@ -36,7 +36,7 @@ const Header = () => {
           onClick={() => handleScroll("reviews")}
           className="hover:text-blue-500"
         >
-          Suscripción
+          Reseñas
         </button>
       </nav>
 
