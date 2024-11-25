@@ -28,9 +28,9 @@ const Home = () => {
         </p>
         <button
           onClick={() => handleScroll("contact")}
-          className="bg-rose-700 px-6 py-3 rounded-lg hover:bg-rose-800 shadow-sm hover:shadow-md shadow-zinc-700 hover:shadow-zinc-700"
+          className="relative bg-rose-700 text-white rounded-lg flex px-6 py-3 items-center justify-center overflow-hidden shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-rose-800 before:duration-500 before:ease-out hover:shadow-rose-800 hover:before:h-56 hover:before:w-56"
         >
-          ¡Reserva el tuyo ahora!
+          <span className="relative">¡Reserva el tuyo ahora!</span>
         </button>
       </div>
     </section>

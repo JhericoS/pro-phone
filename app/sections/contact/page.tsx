@@ -226,10 +226,10 @@ const Contact = () => {
             {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
             <button
               type="submit"
-              className="w-full bg-rose-700 text-white px-6 py-2 rounded-md hover:bg-rose-800"
+              className="relative bg-rose-700 text-white rounded-lg flex w-full px-6 py-2 items-center justify-center overflow-hidden shadow-md transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-rose-800 before:duration-500 before:ease-out hover:shadow-rose-800 hover:before:h-96 hover:before:w-full"
               disabled={isButtonDisabled}
             >
-              Reservar
+              <span className="relative">Reservar</span>
             </button>
           </form>
         </div>
