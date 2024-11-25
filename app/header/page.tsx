@@ -33,6 +33,12 @@ const Header = () => {
           Características
         </button>
         <button
+          onClick={() => handleScroll("versions")}
+          className="hover:text-blue-500"
+        >
+          Versiones
+        </button>
+        <button
           onClick={() => handleScroll("reviews")}
           className="hover:text-blue-500"
         >
@@ -72,6 +78,12 @@ const Header = () => {
             className="hover:text-blue-500"
           >
             Características
+          </button>
+          <button
+            onClick={() => handleScroll("versions")}
+            className="hover:text-blue-500"
+          >
+            Versiones
           </button>
           <button
             onClick={() => handleScroll("reviews")}

@@ -14,13 +14,13 @@ const Versions = () => {
         Versiones del ProPhone
       </h2>
       <div className="flex flex-col lg:flex-row items-center lg:items-center lg:justify-center">
-        <div className="mb-8 lg:mb-0 lg:mr-8">
+        <div className="mb-8 lg:mb-0 lg:mr-24">
           <Image
             src={selectedColor}
             alt="ProPhone"
             width={960}
             height={960}
-            className="w-64 h-64 object-cover"
+            className="w-80 h-96 object-cover"
           />
         </div>
         <div className="flex flex-col items-center lg:items-start">
