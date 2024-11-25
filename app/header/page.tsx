@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex justify-between items-center px-6 py-2 bg-white shadow-md sticky top-0 z-50">
+    <header className="flex justify-between items-center px-6 py-2 bg-white shadow-md sticky top-0 z-50 select-none">
       <div className="text-2xl font-bold font-sans text-rose-600 flex items-center">
         <Image src="/images/pro_logo.png" alt="ProPhone" width={52} height={52} />
         Phone
