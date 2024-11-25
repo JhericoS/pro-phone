@@ -1,13 +1,14 @@
 "use client";
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const handleScroll = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <footer className="bg-white text-zinc-800 py-6 select-none">
+    <footer className="bg-white dark:bg-zinc-800 text-zinc-800 dark:text-white py-6 select-none">
       <div className="container mx-auto px-6">
         {/* Sección Superior */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-6 border-b border-zinc-500 max-w-5xl mx-auto">
@@ -70,19 +71,19 @@ const Footer = () => {
               <h3 className="font-bold mb-2">Soporte</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="hover:text-rose-700">
+                  <Link href="#" className="hover:text-rose-700">
                     Términos y Condiciones
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-rose-700">
+                  <Link href="#" className="hover:text-rose-700">
                     Política de Privacidad
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-rose-700">
+                  <Link href="#" className="hover:text-rose-700">
                     Contacto
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -91,31 +92,31 @@ const Footer = () => {
         {/* Sección Inferior */}
         <div className="text-center space-y-4 mt-6">
           <div className="flex justify-center space-x-6">
-            <a href="#">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 hover:border-rose-700 hover:text-rose-700">
-                <FaFacebookF />
+            <Link href="https://www.facebook.com/" target="_blank">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 dark:border-white hover:border-rose-700 dark:hover:border-rose-700 hover:text-rose-700">
+                <FaFacebookF className="h-5 w-5" />
               </div>
-            </a>
-            <a href="#">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 hover:border-rose-700 hover:text-rose-700">
-                <FaLinkedin />
+            </Link>
+            <Link href="https://www.linkedin.com/" target="_blank">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 dark:border-white hover:border-rose-700 dark:hover:border-rose-700 hover:text-rose-700">
+                <FaLinkedin className="h-5 w-5" />
               </div>
-            </a>
-            <a href="#">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 hover:border-rose-700 hover:text-rose-700">
-                <FaInstagram />
+            </Link>
+            <Link href="https://www.instagram.com/" target="_blank">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 dark:border-white hover:border-rose-700 dark:hover:border-rose-700 hover:text-rose-700">
+                <FaInstagram className="h-5 w-5" />
               </div>
-            </a>
+            </Link>
           </div>
-          <p>
+          <p className="text-xs">
             &copy; 2024{" "}
-            <a
+            <Link
               href="https://www.jhericosolier.com"
               target="_blank"
               className="font-bold hover:text-rose-700"
             >
               Jherico Solier
-            </a>
+            </Link>
             . Todos los derechos reservados.
           </p>
         </div>

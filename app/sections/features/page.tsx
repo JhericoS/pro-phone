@@ -1,7 +1,7 @@
 import features from "@/public/data/features";
 
 const Features = () => (
-  <section id="features" className="px-6 pt-24 pb-12 bg-white text-zinc-800">
+  <section id="features" className="px-6 pt-24 pb-12 bg-white dark:bg-zinc-800 text-zinc-800 dark:text-white">
     <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-8 xl:mb-16">
       Características del ProPhone
     </h2>
