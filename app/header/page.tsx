@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header className="flex justify-between items-center px-6 py-2 bg-white shadow-md sticky top-0 z-50 select-none">
-      <div className="text-2xl font-bold font-sans text-rose-600 flex items-center">
+      <div className="text-2xl font-bold font-sans text-rose-700 flex items-center">
         <Image src="/images/pro_logo.png" alt="ProPhone" width={52} height={52} />
         Phone
       </div>
@@ -26,31 +26,31 @@ const Header = () => {
       <nav className="hidden md:flex text-zinc-700 space-x-8">
         <button
           onClick={() => handleScroll("home")}
-          className="hover:text-rose-500"
+          className="hover:text-rose-700"
         >
           Inicio
         </button>
         <button
           onClick={() => handleScroll("features")}
-          className="hover:text-rose-500"
+          className="hover:text-rose-700"
         >
           Características
         </button>
         <button
           onClick={() => handleScroll("versions")}
-          className="hover:text-rose-500"
+          className="hover:text-rose-700"
         >
           Versiones
         </button>
         <button
           onClick={() => handleScroll("reviews")}
-          className="hover:text-rose-500"
+          className="hover:text-rose-700"
         >
           Reseñas
         </button>
         <button
           onClick={() => handleScroll("contact")}
-          className="hover:text-rose-500"
+          className="hover:text-rose-700"
         >
           Reserva
         </button>
@@ -60,7 +60,7 @@ const Header = () => {
       <div className="md:hidden">
         <button
           onClick={toggleMenu}
-          className="focus:outline-none text-zinc-700 hover:text-rose-500"
+          className="focus:outline-none text-zinc-700 hover:text-rose-700"
         >
           {isMenuOpen ? (
             <FaXmark className="w-6 h-6" />
@@ -79,31 +79,31 @@ const Header = () => {
         <nav className="flex flex-col text-zinc-700 space-y-8 p-4 pt-8">
           <button
             onClick={() => handleScroll("home")}
-            className="hover:text-rose-500"
+            className="hover:text-rose-700"
           >
             Inicio
           </button>
           <button
             onClick={() => handleScroll("features")}
-            className="hover:text-rose-500"
+            className="hover:text-rose-700"
           >
             Características
           </button>
           <button
             onClick={() => handleScroll("versions")}
-            className="hover:text-rose-500"
+            className="hover:text-rose-700"
           >
             Versiones
           </button>
           <button
             onClick={() => handleScroll("reviews")}
-            className="hover:text-rose-500"
+            className="hover:text-rose-700"
           >
             Reseñas
           </button>
           <button
             onClick={() => handleScroll("contact")}
-            className="hover:text-rose-500"
+            className="hover:text-rose-700"
           >
             Reserva
           </button>

@@ -28,7 +28,7 @@ const Home = () => {
         </p>
         <button
           onClick={() => handleScroll("contact")}
-          className="bg-rose-600 px-6 py-3 rounded-lg hover:bg-rose-700 shadow-sm hover:shadow-md shadow-zinc-700 hover:shadow-zinc-700"
+          className="bg-rose-700 px-6 py-3 rounded-lg hover:bg-rose-800 shadow-sm hover:shadow-md shadow-zinc-700 hover:shadow-zinc-700"
         >
           ¡Reserva el tuyo ahora!
         </button>

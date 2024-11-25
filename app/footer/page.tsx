@@ -27,7 +27,7 @@ const Footer = () => {
                 <li>
                   <button
                     onClick={() => handleScroll("home")}
-                    className="hover:text-rose-500"
+                    className="hover:text-rose-700"
                   >
                     Inicio
                   </button>
@@ -35,7 +35,7 @@ const Footer = () => {
                 <li>
                   <button
                     onClick={() => handleScroll("features")}
-                    className="hover:text-rose-500"
+                    className="hover:text-rose-700"
                   >
                     Características
                   </button>
@@ -43,7 +43,7 @@ const Footer = () => {
                 <li>
                   <button
                     onClick={() => handleScroll("versions")}
-                    className="hover:text-rose-500"
+                    className="hover:text-rose-700"
                   >
                     Versiones
                   </button>
@@ -51,7 +51,7 @@ const Footer = () => {
                 <li>
                   <button
                     onClick={() => handleScroll("reviews")}
-                    className="hover:text-rose-500"
+                    className="hover:text-rose-700"
                   >
                     Reseñas
                   </button>
@@ -59,7 +59,7 @@ const Footer = () => {
                 <li>
                   <button
                     onClick={() => handleScroll("contact")}
-                    className="hover:text-rose-500"
+                    className="hover:text-rose-700"
                   >
                     Reserva
                   </button>
@@ -70,17 +70,17 @@ const Footer = () => {
               <h3 className="font-bold mb-2">Soporte</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="hover:text-rose-400">
+                  <a href="#" className="hover:text-rose-700">
                     Términos y Condiciones
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-rose-400">
+                  <a href="#" className="hover:text-rose-700">
                     Política de Privacidad
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-rose-400">
+                  <a href="#" className="hover:text-rose-700">
                     Contacto
                   </a>
                 </li>
@@ -92,17 +92,17 @@ const Footer = () => {
         <div className="text-center space-y-4 mt-6">
           <div className="flex justify-center space-x-6">
             <a href="#">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 hover:border-rose-400 hover:text-rose-400">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 hover:border-rose-700 hover:text-rose-700">
                 <FaFacebookF />
               </div>
             </a>
             <a href="#">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 hover:border-rose-400 hover:text-rose-400">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 hover:border-rose-700 hover:text-rose-700">
                 <FaLinkedin />
               </div>
             </a>
             <a href="#">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 hover:border-rose-400 hover:text-rose-400">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-zinc-800 hover:border-rose-700 hover:text-rose-700">
                 <FaInstagram />
               </div>
             </a>
@@ -112,7 +112,7 @@ const Footer = () => {
             <a
               href="https://www.jhericosolier.com"
               target="_blank"
-              className="font-bold hover:text-rose-400"
+              className="font-bold hover:text-rose-700"
             >
               Jherico Solier
             </a>

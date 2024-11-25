@@ -215,7 +215,7 @@ const Contact = () => {
             {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
             <button
               type="submit"
-              className="w-full bg-rose-600 text-white px-6 py-2 rounded-md hover:bg-rose-700"
+              className="w-full bg-rose-700 text-white px-6 py-2 rounded-md hover:bg-rose-800"
               disabled={isButtonDisabled}
             >
               Reservar
