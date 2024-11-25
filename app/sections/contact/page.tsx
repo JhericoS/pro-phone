@@ -1,8 +1,9 @@
 "use client";
-import colors from "@/public/data/colors";
 import versions from "@/public/data/versions";
-import Image from "next/image";
 import { useState } from "react";
+import emailjs from "emailjs-com";
+import Image from "next/image";
+import colors from "@/public/data/colors";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validateEmail(formData.email)) {
@@ -46,16 +47,52 @@ const Contact = () => {
     }
 
     setError("");
-    alert("¡Gracias por su reserva! Pronto recibirás más información en tu correo registrado.");
-    setFormData({
-      email: "",
-      name: "",
-      phone: "",
-      color: "",
-      storage: "",
-      termsAccepted: false,
-      promotions: false,
-    });
+
+    const selectedVersion = versions.find(
+      (version) => version.storage === formData.storage
+    );
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      color: formData.color,
+      storage: formData.storage,
+      promotions: formData.promotions ? "Sí" : "No",
+      totalPrice: selectedVersion ? selectedVersion.price : "",
+    };
+
+    try {
+      // Correo para usuarios
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "",
+        process.env.NEXT_PUBLIC_EMAILJS_USER_TEMPLATE_ID ?? "",
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID ?? ""
+      );
+      // Correo para admin
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "",
+        process.env.NEXT_PUBLIC_EMAILJS_ADMIN_TEMPLATE_ID ?? "",
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID ?? ""
+      );
+
+      alert(
+        "¡Gracias por su reserva! Pronto recibirás más información en tu correo registrado. No olvides revisar tu bandeja de SPAM."
+      );
+      setFormData({
+        email: "",
+        name: "",
+        phone: "",
+        color: "",
+        storage: "",
+        termsAccepted: false,
+        promotions: false,
+      });
+    } catch (error) {
+      console.error("Error al procesar el formulario", error);
+    }
   };
 
   return (
@@ -73,8 +110,8 @@ const Contact = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="relative z-10 w-full max-w-lg mx-auto bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold text-center mb-8 text-zinc-800">
+        <div className="relative z-10 w-full max-w-xl mx-auto bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
+          <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-8 text-zinc-800">
             Reserva tu ProPhone
           </h2>
           <form onSubmit={handleSubmit} className="w-full">
@@ -154,7 +191,8 @@ const Contact = () => {
                 Acepto los{" "}
                 <a href="#" className="font-semibold ml-1">
                   Términos y condiciones
-                </a>*
+                </a>
+                *
               </span>
             </label>
             {/* Checkbox: Recibir promociones */}

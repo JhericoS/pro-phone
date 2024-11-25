@@ -48,6 +48,12 @@ const Header = () => {
         >
           Reseñas
         </button>
+        <button
+          onClick={() => handleScroll("contact")}
+          className="hover:text-rose-500"
+        >
+          Reserva
+        </button>
       </nav>
 
       {/* Mobile */}
@@ -94,6 +100,12 @@ const Header = () => {
             className="hover:text-rose-500"
           >
             Reseñas
+          </button>
+          <button
+            onClick={() => handleScroll("contact")}
+            className="hover:text-rose-500"
+          >
+            Reserva
           </button>
         </nav>
       </div>
