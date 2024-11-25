@@ -44,8 +44,8 @@ const Reviews = () => {
   });
 
   return (
-    <section id="reviews" className="p-12 bg-gray-100 text-zinc-800">
-      <h2 className="text-3xl font-bold text-center mb-8">Reseñas</h2>
+    <section id="reviews" className="px-4 py-24 bg-white text-zinc-800">
+      <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-8 xl:mb-16">Reseñas</h2>
       <div className="relative max-w-5xl mx-auto select-none ">
         <div className="overflow-hidden p-1" {...swipeHandlers}>
           <div
@@ -68,12 +68,12 @@ const Reviews = () => {
                     </span>
                   ))}
                   {Array.from({ length: 5 - review.rating }).map((_, i) => (
-                    <span key={i} className="text-gray-300">
+                    <span key={i} className="text-zinc-300">
                       ★
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-700">{review.comment}</p>
+                <p className="text-zinc-700">{review.comment}</p>
               </div>
             ))}
           </div>
@@ -82,7 +82,7 @@ const Reviews = () => {
       <div className="flex justify-end mt-6 space-x-4  max-w-5xl mx-auto">
         <button
           onClick={handlePrev}
-          className={`bg-gray-300 p-2 rounded-full hover:bg-gray-400 ${
+          className={`bg-zinc-300 p-2 rounded-full hover:bg-zinc-400 ${
             currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={currentIndex === 0}
@@ -91,7 +91,7 @@ const Reviews = () => {
         </button>
         <button
           onClick={handleNext}
-          className={`bg-gray-300 p-2 rounded-full hover:bg-gray-400 ${
+          className={`bg-zinc-300 p-2 rounded-full hover:bg-zinc-400 ${
             currentIndex === reviews.length - cardsToShow
               ? "opacity-50 cursor-not-allowed"
               : ""

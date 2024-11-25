@@ -21,11 +21,21 @@ body {
 }
 
 @keyframes colorChange {
-  0% { color: #ffffff; }
-  25% { color: #6fa9ff; }
-  50% { color: #ffa0aa; }
-  75% { color: #646464; }
-  100% { color: #ffffff; }
+  0% {
+    color: #ffffff;
+  }
+  25% {
+    color: #ffa0aa;
+  }
+  50% {
+    color: #6fa9ff;
+  }
+  75% {
+    color: #646464;
+  }
+  100% {
+    color: #ffffff;
+  }
 }
 
 .animate-colors {

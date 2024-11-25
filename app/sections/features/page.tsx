@@ -1,15 +1,15 @@
 import features from "@/public/data/features";
 
 const Features = () => (
-  <section id="features" className="p-12 bg-white text-zinc-800">
-    <h2 className="text-3xl font-bold text-center mb-8">
+  <section id="features" className="px-6 pt-24 pb-12 bg-white text-zinc-800">
+    <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-8 xl:mb-16">
       Características del ProPhone
     </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
       {features.map((feature, index) => (
         <div
           key={index}
-          className="relative bg-gray-100 rounded-lg shadow-md overflow-hidden group h-80"
+          className="relative bg-zinc-100 rounded-lg shadow-md overflow-hidden group h-80"
         >
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
@@ -19,7 +19,7 @@ const Features = () => (
             <h3 className="text-xl font-semibold mb-2 transition-all duration-300 group-hover:mb-4">
               {feature.title}
             </h3>
-            <p className="text-gray-300 overflow-hidden max-h-0 group-hover:max-h-12 transition-all duration-500">
+            <p className="text-zinc-300 overflow-hidden max-h-0 group-hover:max-h-12 transition-all duration-500">
               {feature.description}
             </p>
           </div>
