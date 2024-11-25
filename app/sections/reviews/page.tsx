@@ -1,7 +1,7 @@
 import reviews from "@/public/data/reviews";
 
 const Reviews = () => (
-  <section id="reviews" className="p-12 bg-gray-100">
+  <section id="reviews" className="p-12 bg-gray-100 text-zinc-800">
     <h2 className="text-3xl font-bold text-center mb-8">Reseñas</h2>
     <div className="space-y-8">
       {reviews.map((review, index) => (

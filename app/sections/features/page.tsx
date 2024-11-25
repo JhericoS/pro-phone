@@ -1,7 +1,7 @@
 import features from "@/public/data/features";
 
 const Features = () => (
-  <section id="features" className="p-12 bg-white">
+  <section id="features" className="p-12 bg-white text-zinc-800">
     <h2 className="text-3xl font-bold text-center mb-8">
       Características del ProPhone
     </h2>
@@ -9,7 +9,7 @@ const Features = () => (
       {features.map((feature, index) => (
         <div
           key={index}
-          className="relative bg-gray-100 rounded-lg shadow-md overflow-hidden group h-96"
+          className="relative bg-gray-100 rounded-lg shadow-md overflow-hidden group h-80"
         >
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
