@@ -1,37 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ProPhone
 
-## Getting Started
+ProPhone es un producto ficticio inspirado en el dispositivo Oppo Find X8. Este proyecto es una aplicación web desarrollada con Next.js y Tailwind CSS, que incluye características como el cambio entre modo claro y oscuro, diseño responsive y el envío de emails utilizando el servicio EmailJS.
 
-First, run the development server:
+### Capturas
+
+#### Desktop:
+
+![Desktop 1](/public/images/readme/ProPhone_Desktop1.jpg)
+![Desktop 2](/public/images/readme/ProPhone_Desktop2.jpg)
+![Desktop 3](/public/images/readme/ProPhone_Desktop3.jpg)
+
+#### Mobile:
+
+![Mobile 1](/public/images/readme/ProPhone_Mobile1.png)
+![Mobile 2](/public/images/readme/ProPhone_Mobile2.png)
+![Mobile 3](/public/images/readme/ProPhone_Mobile3.png)
+
+La página fue desplegada en Vercel. Se utilizó Environment Variables para la privacidad de las credenciales de EmailJS.
+
+Link: [ProPhone](https://pro-phone.vercel.app/)
+
+## Instalación y Ejecución
+
+Sigue estos pasos para instalar y correr el proyecto localmente:
+
+### Prerrequisitos
+
+Asegúrate de tener instalado Node.js y npm en tu máquina. Puedes descargar Node.js desde [nodejs.org](https://nodejs.org/).
+
+### Clonar el Repositorio
+
+Clona el repositorio a tu máquina local usando el siguiente comando:
+
+```bash
+git clone https://github.com/JhericoS/pro-phone.git
+```
+
+### Instalar Dependencias
+
+Navega al directorio del proyecto y ejecuta el siguiente comando para instalar las dependencias:
+
+```bash
+cd pro-phone
+npm install
+```
+
+### Correr el Servidor de Desarrollo
+
+Una vez instaladas las dependencias, puedes correr el servidor de desarrollo con el siguiente comando:
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
-# or
+# o
 pnpm dev
-# or
+# o
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# pro-phone
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
