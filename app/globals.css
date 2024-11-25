@@ -19,3 +19,29 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes colorChange {
+  0% {
+    color: #ffffff;
+  }
+  25% {
+    color: #ffa0aa;
+  }
+  50% {
+    color: #6fa9ff;
+  }
+  75% {
+    color: #646464;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+
+.animate-colors {
+  animation: colorChange 8s infinite;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

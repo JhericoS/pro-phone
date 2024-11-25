@@ -9,18 +9,18 @@ const Versions = () => {
   const [selectedVersion, setSelectedVersion] = useState(versions[0]);
 
   return (
-    <section id="versions" className="p-12 bg-white text-zinc-800">
-      <h2 className="text-3xl font-bold text-center mb-8">
+    <section id="versions" className="px-6 pt-24 pb-12 bg-white text-zinc-800">
+      <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-16">
         Versiones del ProPhone
       </h2>
       <div className="flex flex-col lg:flex-row items-center lg:items-center lg:justify-center">
-        <div className="mb-8 lg:mb-0 lg:mr-8">
+        <div className="mb-8 lg:mb-0 lg:mr-24">
           <Image
             src={selectedColor}
             alt="ProPhone"
             width={960}
             height={960}
-            className="w-64 h-64 object-cover"
+            className="h-auto max-h-96 w-auto"
           />
         </div>
         <div className="flex flex-col items-center lg:items-start">
