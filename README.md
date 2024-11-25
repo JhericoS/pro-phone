@@ -2,13 +2,23 @@
 
 ProPhone es un producto ficticio inspirado en el dispositivo Oppo Find X8. Este proyecto es una aplicación web desarrollada con Next.js y Tailwind CSS, que incluye características como el cambio entre modo claro y oscuro, diseño responsive y el envío de emails utilizando el servicio EmailJS.
 
+### Capturas
+
+#### Desktop:
+
+![Desktop 1](/public/images/readme/ProPhone_Desktop1.jpg)
+![Desktop 2](/public/images/readme/ProPhone_Desktop2.jpg)
+![Desktop 3](/public/images/readme/ProPhone_Desktop3.jpg)
+
+#### Mobile:
+
+![Mobile 1](/public/images/readme/ProPhone_Mobile1.png)
+![Mobile 2](/public/images/readme/ProPhone_Mobile2.png)
+![Mobile 3](/public/images/readme/ProPhone_Mobile3.png)
+
 La página fue desplegada en Vercel. Se utilizó Environment Variables para la privacidad de las credenciales de EmailJS.
 
 Link: [ProPhone](https://pro-phone.vercel.app/)
-
-Desktop:
-
-Mobile:
 
 ## Instalación y Ejecución
 
