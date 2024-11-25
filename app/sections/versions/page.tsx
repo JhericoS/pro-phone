@@ -9,7 +9,7 @@ const Versions = () => {
   const [selectedVersion, setSelectedVersion] = useState(versions[0]);
 
   return (
-    <section id="versions" className="px-6 pt-24 pb-12 bg-white text-zinc-800">
+    <section id="versions" className="px-6 pt-24 pb-12 bg-white dark:bg-zinc-800 text-zinc-800 dark:text-white">
       <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-16">
         Versiones del ProPhone
       </h2>
@@ -30,8 +30,8 @@ const Versions = () => {
                 key={index}
                 className={`w-12 h-12 rounded-full border-2 ${
                   selectedColor === color.image
-                    ? "border-black"
-                    : "border-zinc-200"
+                    ? "border-black dark:border-white dark:border-4"
+                    : "border-zinc-200 dark:border-zinc-600"
                 }`}
                 style={{ backgroundColor: color.code }}
                 onClick={() => setSelectedColor(color.image)}
@@ -49,8 +49,8 @@ const Versions = () => {
                   key={index}
                   className={`px-4 py-2 rounded-lg border-2 ${
                     selectedVersion.storage === version.storage
-                      ? "border-black"
-                      : "border-zinc-200"
+                      ? "border-black dark:border-white"
+                      : "border-zinc-200 dark:border-zinc-600"
                   }`}
                   onClick={() => setSelectedVersion(version)}
                 >

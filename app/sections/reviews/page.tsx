@@ -44,7 +44,7 @@ const Reviews = () => {
   });
 
   return (
-    <section id="reviews" className="px-4 py-24 bg-white text-zinc-800">
+    <section id="reviews" className="px-4 py-24 bg-white dark:bg-zinc-800 text-zinc-800 dark:text-white">
       <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-8 xl:mb-16">Reseñas</h2>
       <div className="relative max-w-5xl mx-auto select-none ">
         <div className="overflow-hidden p-1" {...swipeHandlers}>
@@ -57,7 +57,7 @@ const Reviews = () => {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md w-80 flex-shrink-0"
+                className="bg-zinc-100 dark:bg-zinc-700 p-6 rounded-lg shadow-md w-80 flex-shrink-0"
                 style={{ minWidth: `calc(${100 / cardsToShow}% - 1rem)` }}
               >
                 <h3 className="text-xl font-semibold">{review.name}</h3>
@@ -73,7 +73,7 @@ const Reviews = () => {
                     </span>
                   ))}
                 </div>
-                <p className="text-zinc-700">{review.comment}</p>
+                <p className="">{review.comment}</p>
               </div>
             ))}
           </div>
@@ -82,7 +82,7 @@ const Reviews = () => {
       <div className="flex justify-end mt-6 space-x-4  max-w-5xl mx-auto">
         <button
           onClick={handlePrev}
-          className={`bg-zinc-300 p-2 rounded-full hover:bg-zinc-400 ${
+          className={`bg-rose-700 p-2 rounded-full hover:bg-rose-800 text-white ${
             currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={currentIndex === 0}
@@ -91,7 +91,7 @@ const Reviews = () => {
         </button>
         <button
           onClick={handleNext}
-          className={`bg-zinc-300 p-2 rounded-full hover:bg-zinc-400 ${
+          className={`bg-rose-700 p-2 rounded-full hover:bg-rose-800 text-white ${
             currentIndex === reviews.length - cardsToShow
               ? "opacity-50 cursor-not-allowed"
               : ""

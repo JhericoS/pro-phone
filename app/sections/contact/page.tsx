@@ -4,6 +4,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import Image from "next/image";
 import colors from "@/public/data/colors";
+import Link from "next/link";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ const Contact = () => {
     promotions: false,
   });
   const [error, setError] = useState("");
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const validateEmail = (email: string): boolean => {
     const emailRegex =
@@ -47,6 +49,7 @@ const Contact = () => {
     }
 
     setError("");
+    setIsButtonDisabled(true);
 
     const selectedVersion = versions.find(
       (version) => version.storage === formData.storage
@@ -79,7 +82,7 @@ const Contact = () => {
       );
 
       alert(
-        "¡Gracias por su reserva! Pronto recibirás más información en tu correo registrado. No olvides revisar tu bandeja de SPAM."
+        "¡Gracias por su reserva! Pronto recibirás más información en tu correo registrado."
       );
       setFormData({
         email: "",
@@ -92,16 +95,20 @@ const Contact = () => {
       });
     } catch (error) {
       console.error("Error al procesar el formulario", error);
+    } finally {
+      setTimeout(() => {
+        setIsButtonDisabled(false);
+      }, 4000);
     }
   };
 
   return (
     <section
       id="contact"
-      className="relative px-6 py-20 flex items-center justify-center bg-white text-zinc-500"
+      className="relative px-6 py-20 flex items-center justify-center text-zinc-500"
     >
       <div className="flex flex-col lg:flex-row w-full max-w-5xl mx-auto">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 select-none">
           <Image
             src={"/images/contact.jpg"}
             layout="fill"
@@ -110,8 +117,8 @@ const Contact = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="relative z-10 w-full max-w-xl mx-auto bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-8 text-zinc-800">
+        <div className="relative z-10 w-full max-w-xl mx-auto bg-white dark:bg-zinc-800 bg-opacity-90 dark:bg-opacity-75 p-8 rounded-lg shadow-lg">
+          <h2 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center mb-8 text-zinc-800 dark:text-white">
             Reserva tu ProPhone
           </h2>
           <form onSubmit={handleSubmit} className="w-full">
@@ -178,7 +185,7 @@ const Contact = () => {
               ))}
             </select>
             {/* Checkbox: Términos y condiciones */}
-            <label className="flex items-center mb-4">
+            <label className="flex items-center mb-4 dark:text-white">
               <input
                 type="checkbox"
                 name="termsAccepted"
@@ -189,14 +196,14 @@ const Contact = () => {
               />
               <span className="inline-table items-center">
                 Acepto los{" "}
-                <a href="#" className="font-semibold ml-1">
+                <Link href="#" className="font-semibold ml-1">
                   Términos y condiciones
-                </a>
+                </Link>
                 *
               </span>
             </label>
             {/* Checkbox: Recibir promociones */}
-            <label className="flex items-center mb-4">
+            <label className="flex items-center mb-4 dark:text-white">
               <input
                 type="checkbox"
                 name="promotions"
@@ -209,7 +216,8 @@ const Contact = () => {
             {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
             <button
               type="submit"
-              className="w-full bg-rose-600 text-white px-6 py-2 rounded-md hover:bg-rose-700"
+              className="w-full bg-rose-700 text-white px-6 py-2 rounded-md hover:bg-rose-800"
+              disabled={isButtonDisabled}
             >
               Reservar
             </button>
