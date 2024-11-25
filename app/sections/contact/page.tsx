@@ -25,6 +25,11 @@ const Contact = () => {
     return emailRegex.test(email);
   };
 
+  const validatePhone = (phone: string): boolean => {
+    const phoneRegex = /^[0-9]{9}$/;
+    return phoneRegex.test(phone);
+  };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -37,6 +42,11 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!validatePhone(formData.phone)) {
+      setError("Por favor, ingresa un número de teléfono válido.");
+      return;
+    }
 
     if (!validateEmail(formData.email)) {
       setError("Por favor, ingresa un correo válido.");
