@@ -1,4 +1,3 @@
-"use client";
 import versions from "@/public/data/versions";
 import { useState } from "react";
 import emailjs from "emailjs-com";
@@ -16,6 +15,7 @@ const Contact = () => {
     promotions: false,
   });
   const [error, setError] = useState("");
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const validateEmail = (email: string): boolean => {
     const emailRegex =
@@ -47,6 +47,7 @@ const Contact = () => {
     }
 
     setError("");
+    setIsButtonDisabled(true);
 
     const selectedVersion = versions.find(
       (version) => version.storage === formData.storage
@@ -79,7 +80,7 @@ const Contact = () => {
       );
 
       alert(
-        "¡Gracias por su reserva! Pronto recibirás más información en tu correo registrado. No olvides revisar tu bandeja de SPAM."
+        "¡Gracias por su reserva! Pronto recibirás más información en tu correo registrado."
       );
       setFormData({
         email: "",
@@ -92,6 +93,10 @@ const Contact = () => {
       });
     } catch (error) {
       console.error("Error al procesar el formulario", error);
+    } finally {
+      setTimeout(() => {
+        setIsButtonDisabled(false);
+      }, 4000);
     }
   };
 
@@ -210,6 +215,7 @@ const Contact = () => {
             <button
               type="submit"
               className="w-full bg-rose-600 text-white px-6 py-2 rounded-md hover:bg-rose-700"
+              disabled={isButtonDisabled}
             >
               Reservar
             </button>
